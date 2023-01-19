@@ -13,13 +13,16 @@
     <button @click="doLogin">Login</button>
     {{ params.username }}
     {{ params.password }}
+    <div>------------------------------------------</div>
+    <p>Product name: {{ iceCream.name }}</p>
+    <p>Product price: {{ iceCream.price }}</p>
   </div>
 </template>
 
 <script lang="ts" setup>
 import SonPageOne from "./views/SonPageOne.vue";
 import SonPageTwo from "./views/SonPageTwo.vue";
-import { ref, getCurrentInstance } from "vue";
+import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
 const params = ref({
@@ -30,6 +33,13 @@ const params = ref({
 const { proxy } = getCurrentInstance();
 // console.log(proxy.fool);
 // console.log(proxy.$axios);
+
+// 处理对象尽量要用reactive
+const iceCream = reactive({
+  name: "Fazer",
+  price: 10,
+});
+console.log(iceCream);
 
 function doLogin() {
   proxy.$axios
