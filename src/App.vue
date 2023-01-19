@@ -1,30 +1,26 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div>
+    <div>Father Component:</div>
+    <div>{{ msg }}</div>
+    <button @click="handleClick">get expose</button>
+    <div>------------------------------------------</div>
+    <NewPage ref="helloword" @on-click="receive"></NewPage>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script lang="ts" setup>
+import NewPage from "./views/NewPage.vue";
+import { ref } from "vue";
+const msg = ref("");
+const helloword = ref();
+
+function receive(info: string) {
+  msg.value = info;
 }
 
-nav {
-  padding: 30px;
+// const instance = getCurrentInstance()
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+function handleClick() {
+  console.log(helloword.value.exposeInfo);
 }
-</style>
+</script>
