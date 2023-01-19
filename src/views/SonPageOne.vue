@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Son Component</h3>
+    <h3>Son1 Component</h3>
     <button @click="sendInfo">Send</button>
   </div>
 </template>
