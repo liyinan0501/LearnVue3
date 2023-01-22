@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import SonPageOne from "./views/SonPageOne.vue";
+import SonPageOne from "./views/01EmitExpose.vue";
 import SonPageTwo from "./views/02Ref.vue";
 import SonPageThree from "./views/03Reactive.vue";
 import SonPageFour from "./views/04Proxy.vue";
