@@ -19,6 +19,8 @@
     <div>------------------------------------------</div>
     <SonPageThree></SonPageThree>
     <div>------------------------------------------</div>
+    <SonPageFour></SonPageFour>
+    <div>------------------------------------------</div>
     <SonPageFive></SonPageFive>
     <div>------------------------------------------</div>
   </div>
@@ -26,10 +28,10 @@
 
 <script lang="ts" setup>
 import SonPageOne from "./views/SonPageOne.vue";
-import SonPageTwo from "./views/SonPageTwo.vue";
-import SonPageThree from "./views/SonPageThree.vue";
-import SonPageFour from "./views/SonPageFour.vue";
-import SonPageFive from "./views/SonPageFive.vue";
+import SonPageTwo from "./views/02Ref.vue";
+import SonPageThree from "./views/03Reactive.vue";
+import SonPageFour from "./views/04Proxy.vue";
+import SonPageFive from "./views/05Computed.vue";
 import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
