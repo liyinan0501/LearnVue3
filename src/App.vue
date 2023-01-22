@@ -18,6 +18,9 @@
     <p>Product price: {{ iceCream.price }}</p>
     <div>------------------------------------------</div>
     <SonPageThree></SonPageThree>
+    <div>------------------------------------------</div>
+    <SonPageFive></SonPageFive>
+    <div>------------------------------------------</div>
   </div>
 </template>
 
@@ -25,6 +28,8 @@
 import SonPageOne from "./views/SonPageOne.vue";
 import SonPageTwo from "./views/SonPageTwo.vue";
 import SonPageThree from "./views/SonPageThree.vue";
+import SonPageFour from "./views/SonPageFour.vue";
+import SonPageFive from "./views/SonPageFive.vue";
 import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
