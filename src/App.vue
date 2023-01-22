@@ -16,12 +16,15 @@
     <div>------------------------------------------</div>
     <p>Product name: {{ iceCream.name }}</p>
     <p>Product price: {{ iceCream.price }}</p>
+    <div>------------------------------------------</div>
+    <SonPageThree></SonPageThree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import SonPageOne from "./views/SonPageOne.vue";
 import SonPageTwo from "./views/SonPageTwo.vue";
+import SonPageThree from "./views/SonPageThree.vue";
 import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
