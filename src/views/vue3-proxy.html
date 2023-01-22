@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proxy</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "jack",
+        age: 20,
+      };
+      let proxy = new Proxy(person, {
+        get(target, attr) {
+          console.log("Get triggered");
+          // return target[attr];
+          return Reflect.get(target, attr);
+        },
+        set(target, attr, value) {
+          console.log("Set triggered");
+          // target[attr] = value;
+          return Reflect.set(target, attr, value);
+        },
+        deleteProperty(target, attr) {
+          console.log("Delete triggered");
+          // delete target[attr];
+          return Reflect.deleteProperty(target, attr);
+        },
+      });
+      console.log(proxy.name); // Get triggered jack
+      proxy.name = "rose"; // Set triggered
+      delete proxy.name; //{age: 20}
+      console.log(proxy);
+
+      let obj = {
+        name: "luis",
+      };
+
+      // try {
+      //   Object.defineProperty(obj, "title", {
+      //     get() {
+      //       return "welcome";
+      //     },
+      //   });
+      //   Object.defineProperty(obj, "title", {
+      //     get() {
+      //       return "welcome";
+      //     },
+      //   });
+      // } catch (error) {
+      //   console.log(error);
+      // }
+
+      const result1 = Reflect.defineProperty(obj, "title", {
+        get() {
+          return "welcome";
+        },
+      });
+      const result2 = Reflect.defineProperty(obj, "title", {
+        get() {
+          return "welcome";
+        },
+      });
+      console.log(result1, result2);
+      if (result2) {
+        console.log("sentence!");
+      } else {
+        console.log("there is an error");
+      }
+      console.log(obj);
+    </script>
+  </body>
+</html>
