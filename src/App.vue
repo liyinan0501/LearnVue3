@@ -23,6 +23,7 @@
     <div>------------------------------------------</div>
     <SonPageFive></SonPageFive>
     <div>------------------------------------------</div>
+    <SonPageSix></SonPageSix>
   </div>
 </template>
 
@@ -32,6 +33,7 @@ import SonPageTwo from "./views/02Ref.vue";
 import SonPageThree from "./views/03Reactive.vue";
 import SonPageFour from "./views/04Proxy.vue";
 import SonPageFive from "./views/05Computed.vue";
+import SonPageSix from "./views/06Watch.vue";
 import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
