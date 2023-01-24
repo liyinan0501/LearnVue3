@@ -24,6 +24,10 @@
     <SonPageFive></SonPageFive>
     <div>------------------------------------------</div>
     <SonPageSix></SonPageSix>
+    <div>------------------------------------------</div>
+    <SonPageSeven></SonPageSeven>
+    <div>------------------------------------------</div>
+    <SonPageEight></SonPageEight>
   </div>
 </template>
 
@@ -34,6 +38,8 @@ import SonPageThree from "./views/03Reactive.vue";
 import SonPageFour from "./views/04Proxy.vue";
 import SonPageFive from "./views/05Computed.vue";
 import SonPageSix from "./views/06Watch.vue";
+import SonPageSeven from "./views/07V-model.vue";
+import SonPageEight from "./views/08V-bind.vue";
 import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
