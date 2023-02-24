@@ -28,6 +28,8 @@
     <SonPageSeven></SonPageSeven>
     <div>------------------------------------------</div>
     <SonPageEight></SonPageEight>
+    <div>------------------------------------------</div>
+    <SonPageNine></SonPageNine>
   </div>
 </template>
 
@@ -40,6 +42,7 @@ import SonPageFive from "./views/05Computed.vue";
 import SonPageSix from "./views/06Watch.vue";
 import SonPageSeven from "./views/07V-model.vue";
 import SonPageEight from "./views/08V-bind.vue";
+import SonPageNine from "./views/09provide-inject.vue";
 import { ref, getCurrentInstance, reactive } from "vue";
 const msg = ref("");
 const helloword = ref();
