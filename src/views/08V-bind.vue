@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>06 V-bind</h3>
+    <h3>08 V-bind</h3>
     <p tag="title"></p>
     <img v-bind:src="image" alt="" />
     <a :href="url">Google</a>
